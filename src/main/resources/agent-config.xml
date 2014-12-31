@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <log level="info" console="true"/>
+    <type private="false">
+        <includepatterns>
+            <includepattern>com/ass/.*</includepattern>
+        </includepatterns>
+        <excludepatterns>
+            <excludepattern>net/.*|org/.*|com/intellij/.*|com/google/.*|com/thoughtworks/.*|ch/qos/.*|com/alibaba/.*</excludepattern>
+        </excludepatterns>
+        <forceincludepatterns>
+            <forceincludepattern>org/ass/.*</forceincludepattern>
+        </forceincludepatterns>
+    </type>
+    <method private="false">
+        <includepatterns>
+            <includepattern>
+                <owner>.*</owner>
+                <name>.*</name>
+                <desc>.*</desc>
+            </includepattern>
+        </includepatterns>
+        <excludepatterns>
+            <excludepattern>
+                <owner>.*</owner>
+                <name>set.*</name>
+                <desc>.*</desc>
+            </excludepattern>
+        </excludepatterns>
+    </method>
+    <codeinserterbuilders>
+        <codeinserterbuilder>org.onelab.monitor.agent.transform.asm.inserter.builder.PicControllerBuilder</codeinserterbuilder>
+    </codeinserterbuilders>
+</config>
