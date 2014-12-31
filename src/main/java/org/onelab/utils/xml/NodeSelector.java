@@ -38,7 +38,7 @@ public class NodeSelector {
      */
     public static Node selectNode(Node src,String name,int index){
         if (src == null) return null;
-        List<Node> res = new ArrayList<Node>(1);
+        List<Node> res = new ArrayList<Node>(index+1);
         search(res,src,name,index);
         if (res.size()>index){
             return res.get(index);
